@@ -5,22 +5,24 @@ public class tiyennegz {
         Scanner sc = new Scanner(System.in);
         System.out.println("Kérek egy szót");
         String be = sc.nextLine();
+
         System.out.println("Mit szeretne csinálni?");
         System.out.println("Nagy betűs (NB), Kis betűs (KB), Hossza (HO), Összehasonlítás (ÖH), Egy részét kiíratni (EK), Kilépni (KI)");
         while (sc.nextLine() == "ki"){
 
             System.out.println("Nagy betűs (NB), Kis betűs (KB), Hossza (HO), Összehasonlítás (ÖH), Egy részét kiíratni (EK), Kilépni (KI)");
-            if (be == "NB"){
+            String val = sc.nextLine();
+            if (val.equals("nb")){
                 System.out.println(be.toUpperCase());
-            }else if (be == "KB") {
+            }else if (val.equals( "kb")) {
                 System.out.println(be.toLowerCase());
-            }else if (be == "HO"){
+            }else if (val.equals("ho")){
                 System.out.println(be.length());
-            }else if (be == "ÖH"){
+            }else if (val.equals("öh")){
                 System.out.println("Második szöveg: ");
                 String be2 = sc.nextLine();
-
-            }else if (be == "EK"){
+                System.out.println(be.compareTo(be2));
+            }else if (val.equals("ek")){
                 System.out.println("Hanyadik karaktertől kezdje?");
                 int egy = sc.nextInt();
                 System.out.println("Hanyadik karakterig írja ki?");
